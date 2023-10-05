@@ -1,0 +1,7 @@
+
+- INSERT INTO users (name, idade, email) VALUES (:name, :idade, :email)
+- UPDATE users SET name = :name, idade = :idade, email = :email WHERE id = :id
+- INSERT INTO users (name, idade, email) VALUES (:name, :idade, :email)
+- UPDATE users SET name = :name, idade = :idade, email = :email WHERE id = :id
+- INSERT INTO users (name, idade, email) VALUES (:name, :idade, :email)
+- UPDATE users SET name = :name, idade = :idade, email = :email WHERE id = :id
