@@ -33,8 +33,8 @@ class UserService
 
         $success = $sql->execute();
 
-        $queryp = $sql->queryString;
-        $this->db->query($queryp); // gravando no log
+        $query = $sql->queryString;
+        $this->db->query($query); // gravando no log
 
         if ($success == 1) {
             echo "User $nome criado com sucesso \n";
@@ -94,6 +94,22 @@ class UserService
         return $query -> fetchAll();
     }
 
+    public function deleteUser($id)
+    {
+        $query = "DELETE FROM users WHERE id=?";
+        $sql = $this->db->prepare($query);
+
+        $success = $sql->execute([$id]);
+
+        $this->db->query($query);
+
+        if ($success == 1) {
+            echo "User com id $id deletado com sucesso\n";
+        } else {
+            echo "Houve um erro ao deletar o dado \n";
+        };
+
+    }
 
 }
 
